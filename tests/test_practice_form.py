@@ -18,7 +18,7 @@ def test_filled_form():
 
     practice_form.input_subject('Computer Science')
 
-    practice_form.select_hobby('Music')
+    practice_form.select_hobbies('Music', 'Sports')
 
     practice_form.upload_picture('resources/picture.jpg')
 
@@ -29,14 +29,14 @@ def test_filled_form():
 
     # THEN
 
-    practice_form.validation_form(
+    practice_form.assert_of_registered_user(
             'Aleksey Yablonskiy',
             'alekseyablonskiy@gmail.com',
             'Male',
             '1234567890',
             '27 October,1996',
             'Computer Science',
-            'Music',
+            'Music, Sports',
             'picture.jpg',
             'Minsk',
             'NCR Delhi'
